@@ -1,3 +1,4 @@
-language: java
+os: linux
 arch: ppc64le
+language: java
 after_failure: print_surefire_reports.sh
