@@ -1,5 +1,10 @@
 os: linux
-arch: ppc64le
+jobs:
+  - arch: amd64
+    env: TARGET=amd64
+  - arch: ppc64le
+    env: TARGET=ppc64le
+    
 language: java
 addon:
   apt: maven
