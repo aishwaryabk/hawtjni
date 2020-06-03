@@ -5,8 +5,6 @@ jobs:
   - arch: ppc64le
     env: TARGET=ppc64le
     
-language: java
-
 script:
   - cd /opt
   - wget https://www-eu.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
@@ -17,5 +15,7 @@ script:
   - export PATH=${M2_HOME}/bin:${PATH}
   - " > /etc/profile.d/maven.sh
   - source /etc/profile.d/maven.sh
+    
+language: java
 
 after_failure: print_surefire_reports.sh
