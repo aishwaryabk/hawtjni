@@ -17,5 +17,6 @@ before_install:
          ln -s apache-maven-3.6.3 maven
          export M2_HOME=/opt/maven
          export PATH=${M2_HOME}/bin:${PATH}
+    fi    
   
 after_failure: print_surefire_reports.sh
