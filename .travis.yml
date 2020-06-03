@@ -4,13 +4,10 @@ jobs:
     env: TARGET=amd64
   - arch: ppc64le
     env: TARGET=ppc64le
-       
-language: java
-
- before_install: 
-        - wget https://downloads.apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz -P /tmp
-        - tar -xf /tmp/apache-maven-*.tar.gz -C /opt
-        - export MAVEN_HOME=/opt/apache-maven-3.6.3
-        - export PATH=${MAVEN_HOME}/bin:${PATH}
+     before_install: 
+            - wget https://downloads.apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz -P /tmp
+            - tar -xf /tmp/apache-maven-*.tar.gz -C /opt
+            - export MAVEN_HOME=/opt/apache-maven-3.6.3
+            - export PATH=${MAVEN_HOME}/bin:${PATH}
   
 after_failure: print_surefire_reports.sh
