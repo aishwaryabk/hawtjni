@@ -10,7 +10,7 @@ addon:
   
 language: java
 
-before_script:
+install:
   - GOARCH="${TARGET}" 
   - |
     if [ "${TARGET}" == "ppc64le" ]; then
